@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<script src="{{ url_for('static', filename='js/jquery-1.10.2.js') }}"></script>
+<script src="{{ url_for('static', filename='js/Chart.bundle.min.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bulma.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Chart.min.css') }}">
+<style>
+	#design {
+		height: 102vh;
+        background-color: #27DAB0;
+	}
+    #box {
+        width:400px;
+        height: 400px;
+    }
+    .main {
+        padding: 50px 80px;
+    }
+    #login {
+        padding: 10px;
+        margin-top: 15%;
+    }
+</style>
+</head>
+<body>
+	<div id="container" class="columns is-centered">
+       <div class="column is-half" id="design">
+            <div class="columns is-multiline">
+                    <div id="box" class="column">
+                    </div>
+                    <div id="box" class="column">
+                    </div>
+                    <div id="box" class="column">
+                    </div>
+            </div>
+       </div>
+       <div class="column is-half">
+           <div class="container" id="login">
+               <div class="container">
+                    <p class="title is-1 has-text-centered">
+                        MAIN LOGIN
+                    </p>
+               </div>
+               <div class="columns is-centered main">
+                   <form action="" method="POST">
+                    <div class="column">
+                        <div class="field">
+                            <label class="label">Username</label>
+                            <div class="control">
+                                <input class="input" name="username" type="text" placeholder="e.g admin102">
+                            </div>
+                        </div>
+                              
+                        <div class="field">
+                            <label class="label">Password</label>
+                            <div class="control">
+                                <input class="input" name="password" type="password" placeholder="*************">
+                            </div>
+                        </div>
+                        <input type="submit" value="LOGIN" class="button is-large is-fullwidth is-link">
+                   </div>
+                   {% if error %}
+                        <p class="error"><strong>Error:</strong> {{ error }}
+                    {% endif %}
+                   </form>
+               </div>
+           </div>
+       </div>
+        
+    </div>
+    <script>
+           
+    </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CarCrashManagement</string>
+    <string name="notice">Please be close to your Cars dashboard and give the app the permission to access Bluetooth.</string>
+</resources>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+<script src="{{ url_for('static', filename='js/jquery-1.10.2.js') }}"></script>
+<script src="{{ url_for('static', filename='js/Chart.bundle.min.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bulma.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Chart.min.css') }}">
+<style>
+	#box {
+		height: 400px;
+	}
+    .navbar {
+        box-shadow: 10px 10px 5px grey;
+        height: 80px;
+    }
+    .navbar-item img {
+        max-height: 4.5rem;
+    }
+</style>
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="/dashboard">
+          Dashboard
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Options
+          </a>
+  
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="/MngResponse">
+              Add Responders
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item" href="/MngAccident">
+              View Accidents
+            </a>
+            <hr class="navbar-divider">
+          </div>
+        </div>
+      </div>
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-link" href="/logout">
+              <strong>LOG OUT</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+<section class="section">
+  <p class="title is-4">User: {% if user %}{{user}}{% endif %}</p>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="box">
+          <article class="media">
+            <div class="media-content">
+              <div class="content">
+                <p>Handler Responder</p>
+                <p>View and Add new Responder</p>
+                <a href="/MngResponse">Go here</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="column">
+          <div class="box">
+            <article class="media">
+              <div class="media-content">
+                <div class="content">
+                  <p>Handle Accidents</p>
+                  <p>View recent accidents and </p>
+                  <a href="/MngAccident">Go here</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

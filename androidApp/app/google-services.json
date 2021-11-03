@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "532356359015",
+    "firebase_url": "https://carcrach-13171.firebaseio.com",
+    "project_id": "carcrach-13171",
+    "storage_bucket": "carcrach-13171.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:532356359015:android:be0b504cedd341149d05c2",
+        "android_client_info": {
+          "package_name": "com.internxt.carcrashmanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "532356359015-jjsn7dtjpej841utfa8a1oapf1ddp75k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.internxt.carcrashmanagement",
+            "certificate_hash": "37dce394a0fdb387ec3aa42f7f545aee85684dfc"
+          }
+        },
+        {
+          "client_id": "532356359015-6kgunu9ad84jt0bk1492fhbmcdpagvrr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "<Google API Key>"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "532356359015-6kgunu9ad84jt0bk1492fhbmcdpagvrr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

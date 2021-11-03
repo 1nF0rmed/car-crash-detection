@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Responder Register</title>
+<script src="{{ url_for('static', filename='js/jquery-1.10.2.js') }}"></script>
+<script src="{{ url_for('static', filename='js/Chart.bundle.min.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bulma.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Chart.min.css') }}">
+<style>
+	#design {
+		height: 102vh;
+        background-color: #276CDA;
+	}
+    #box {
+        width:400px;
+        height: 400px;
+    }
+    .main {
+        padding: 50px 80px;
+    }
+    #login {
+        padding: 10px;
+        margin-top: 15%;
+    }
+    .reg {
+        margin-top: 5px;
+    }
+</style>
+</head>
+<body>
+	<div id="container" class="columns is-centered">
+       <div class="column is-fullwidth">
+           <div class="container" id="login">
+               <div class="container">
+                    <p class="title is-1 has-text-centered">
+                        RESPONDER REGISTRATION
+                    </p>
+               </div>
+               <div class="columns is-centered main">
+                   <div class="column">
+                        <div class="field">
+                            <label class="label">Username</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="e.g responder102">
+                            </div>
+                        </div>
+                              
+                        <div class="field">
+                            <label class="label">Password</label>
+                            <div class="control">
+                                <input class="input" type="password" placeholder="*************">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Confirm Password</label>
+                            <div class="control">
+                                <input class="input" type="password" placeholder="*************">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Address</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="e.g White Field ">
+                            </div>
+                        </div>
+                        <div class="control">
+                            <label class="label">Service Type</label>
+                            <div class="select">
+                                  <select name="type" id="type">
+									  <option value="police">Police</option>
+									  <option value="hospital">Hospital</option>
+								  </select>
+                            </div>
+                              </div>
+                        <a href="#">
+                            <button class="button is-large is-link">REGISTER</button>
+                        </a>
+                   </div>
+               </div>
+           </div>
+       </div>
+        
+    </div>
+    <script>
+    </script>
+</body>
+</html>

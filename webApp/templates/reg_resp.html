@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ADMIN: Time Table creation</title>
+<script src="{{ url_for('static', filename='js/jquery-1.10.2.js') }}"></script>
+<script src="{{ url_for('static', filename='js/Chart.bundle.min.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bulma.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Chart.min.css') }}">
+<style>
+	#box {
+		height: 400px;
+	}
+    .navbar {
+        box-shadow: 10px 10px 5px grey;
+        height: 80px;
+    }
+    .navbar-item img {
+        max-height: 4.5rem;
+    }
+</style>
+</head>
+<body>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+              
+                <div id="navbarBasicExample" class="navbar-menu">
+                  <div class="navbar-start">
+                    <a class="navbar-item" href="/dashboard">
+                      Dashboard
+                    </a>
+              
+                    <div class="navbar-item has-dropdown is-hoverable">
+                      <a class="navbar-link">
+                        Options
+                      </a>
+              
+                      <div class="navbar-dropdown">
+                        <a class="navbar-item" href="/MngResponse">
+                          Add Responders
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item" href="/MngAccident">
+                          View Accidents
+                        </a>
+                        <hr class="navbar-divider">
+                      </div>
+                    </div>
+                  </div>
+                      </div>
+              
+                  <div class="navbar-end">
+                    <div class="navbar-item">
+                      <div class="buttons">
+                        <a class="button is-link" href="/login">
+                          <strong>LOG OUT</strong>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+    <section class="section">
+        <p class="title is-1 has-text-centered">Add Responder Information</p>
+    </section>
+    <section class="section">
+        <div class="container">
+            <form action="" method="POST">
+                <p class="title is-4 has-text-centered">Enter Responder User</p>
+                <div class="field">
+                    <div class="control">
+                        <input class="input" name="username" type="text" placeholder="Name">
+                    </div>
+                </div>
+                <p class="title is-4 has-text-centered">Enter Responder Name</p>
+                <div class="field">
+                    <div class="control">
+                        <input class="input" name="name" type="text" placeholder="e.g 7F042AB">
+                    </div>
+                </div>
+                <p class="title is-4 has-text-centered">Enter Location</p>
+                <div class="field">
+                    <div class="control">
+                        <input class="input" name="location" type="text" placeholder="e.g user02">
+                    </div>
+                </div>
+                <p class="title is-4 has-text-centered">Enter Coordinates</p>
+                <div class="field">
+                    <div class="control">
+                        <input class="input" name="coor" type="text" placeholder="e.g user02">
+                    </div>
+                </div>
+                <p class="title is-4 has-text-centered">Enter Password </p>
+                <div class="field">
+                    <div class="control">
+                        <input class="input" name="password" type="password" placeholder="e.g classCS1">
+                    </div>
+                </div>
+                <p class="has-text-centered">
+                    <input type="submit" value="Add Responder" class="button is-large is-half is-link">
+                </p>
+                
+            </form>
+            {{ status|safe }}
+            <p class="title is-3">Current Responders</p>      
+            {{ sub|safe }}     
+        </div>
+        
+</section>
+
+	
+</body>
+</html>
